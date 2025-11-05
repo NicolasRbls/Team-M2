@@ -28,7 +28,7 @@ export const players: Player[] = [
     codingWeaknesses: "CSS , TypeScript",
     biggestAchievement: "Created a mobile app called HealthyCore, focused on fitness and nutrition.",
     funFact: "Practice scuba diving and have earned several diving certifications.",
-    photo: "images/NR-pdp.jpg"
+    photo: "/images/NR-pdp.jpg"
   },
   {
     id: 2,
@@ -42,6 +42,6 @@ export const players: Player[] = [
     codingWeaknesses: "CSS styling, UI/UX design, Presentation skills",
     biggestAchievement: "Wrote the necessary code for running the webcomic at janov.eu/comic",
     funFact: "I really enjoy looking at pictures of pallas' cats",
-    photo: "images/AP-pdp.webp" // Placeholder photo
+    photo: "/images/AP-pdp.webp" // Placeholder photo
   }
 ];
