@@ -1,4 +1,4 @@
-import { FlagIcon } from 'react-flag-kit';
+import { FlagIcon, FlagIconCode } from 'react-flag-kit';
 
 const AboutMePage = () => {
   return (
@@ -15,7 +15,7 @@ const AboutMePage = () => {
           <p><strong>Age:</strong> 20</p>
           <p><strong>Date of Birth:</strong> 2003-07-23</p>
           <p><strong>Place of Birth:</strong> Libourne , France</p>
-          <p><strong>Nationality:</strong> French <FlagIcon code="FR" /></p>
+          <p><strong>Nationality:</strong> French <FlagIcon code={"FR" as FlagIconCode} /></p>
           <hr />
           <h4>Written Evaluation</h4>
           <p>

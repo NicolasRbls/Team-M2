@@ -1,3 +1,5 @@
+import { FlagIconCode } from 'react-flag-kit';
+
 export interface Player {
   id: number;
   name: string;
@@ -5,7 +7,7 @@ export interface Player {
   dateOfBirth: string;
   placeOfBirth: string;
   nationality: string;
-  countryCode: string;
+  countryCode: FlagIconCode;
   codingStrengths: string;
   codingWeaknesses: string;
   biggestAchievement: string;
@@ -26,14 +28,14 @@ export const players: Player[] = [
     codingWeaknesses: "CSS , TypeScript",
     biggestAchievement: "Created a mobile app called HealthyCore, focused on fitness and nutrition.",
     funFact: "Practice scuba diving and have earned several diving certifications.",
-    photo: "images/NR-pdp.jpg"
+    photo: "public/images/NR-pdp.jpg"
   },
   {
     id: 2,
     name: "Achille POIRIER",
     age: 22,
-    dateOfBirth: "", // You can fill this in later if you have it
-    placeOfBirth: "France",
+    dateOfBirth: "2003-06-01", 
+    placeOfBirth: "Marseille , France",
     nationality: "French",
     countryCode: "FR",
     codingStrengths: "Backend, CI/CD, K8s",
