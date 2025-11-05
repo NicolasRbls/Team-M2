@@ -28,7 +28,7 @@ export const players: Player[] = [
     codingWeaknesses: "CSS , TypeScript",
     biggestAchievement: "Created a mobile app called HealthyCore, focused on fitness and nutrition.",
     funFact: "Practice scuba diving and have earned several diving certifications.",
-    photo: "public/images/NR-pdp.jpg"
+    photo: "images/NR-pdp.jpg"
   },
   {
     id: 2,
