@@ -109,14 +109,6 @@ body.light .nav-link:hover {
   margin-top: 2rem;
 }
 
-body.dark .about-me-page h4 {
-  color: var(--accent-color-dark);
-}
-
-body.light .about-me-page h4 {
-  color: var(--accent-color-light);
-}
-
 .about-me-page p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -191,6 +183,10 @@ body.light .card {
 
 .card-body {
   padding: 1.5rem;
+}
+
+.card-body h5 {
+  transition: color 0.3s ease;
 }
 
 body.dark .card-body h5 {

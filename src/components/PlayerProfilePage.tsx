@@ -14,7 +14,7 @@ const PlayerProfilePage = () => {
     <div className="container my-5">
       <div className="row">
         <div className="col-md-4 text-center">
-          <img src={`/${player.photo}`} className="img-fluid rounded-circle mb-4" alt={player.name} style={{width: '250px', height: '250px', objectFit: 'cover'}} />
+          <img src={player.photo} className="img-fluid rounded-circle mb-4" alt={player.name} style={{width: '250px', height: '250px', objectFit: 'cover'}} />
           <Link to="/" className="btn btn-primary btn-lg">Back to Squad</Link>
         </div>
         <div className="col-md-8">
