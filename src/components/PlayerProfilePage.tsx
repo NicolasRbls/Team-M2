@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { players } from '../data';
+import { FlagIcon, FlagIconCode } from 'react-flag-kit';
 
 const PlayerProfilePage = () => {
   const { id } = useParams<{ id: string }>();
@@ -24,7 +25,7 @@ const PlayerProfilePage = () => {
               <p><strong>Age:</strong> {player.age}</p>
               <p><strong>Date of Birth:</strong> {player.dateOfBirth}</p>
               <p><strong>Place of Birth:</strong> {player.placeOfBirth}</p>
-              <p><strong>Nationality:</strong> {player.nationality} {player.flag}</p>
+              <p><strong>Nationality:</strong> {player.nationality} <FlagIcon code={player.countryCode as FlagIconCode} /></p>
             </div>
             <div className="col-md-6">
               <p><strong>Coding Strengths:</strong> {player.codingStrengths}</p>
