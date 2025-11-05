@@ -12,7 +12,7 @@ const AboutMePage = () => {
           <div className="player-profile-header-info">
             <h1 className="player-profile-name">Nicolas Robles</h1>
             <div className="player-profile-meta">
-              <span>Age: 20</span>
+              <span>Age: 22</span>
               <span>DOB: 2003-07-23</span>
               <span><FlagIcon code={"FR" as FlagIconCode} /> French</span>
             </div>
