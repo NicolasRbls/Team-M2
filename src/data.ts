@@ -5,7 +5,7 @@ export interface Player {
   dateOfBirth: string;
   placeOfBirth: string;
   nationality: string;
-  flag: string;
+  countryCode: string;
   codingStrengths: string;
   codingWeaknesses: string;
   biggestAchievement: string;
@@ -17,25 +17,25 @@ export const players: Player[] = [
   {
     id: 1,
     name: "Nicolas Robles",
-    age: 22,
+    age: 20,
     dateOfBirth: "2003-07-23",
     placeOfBirth: "Libourne , France",
-    nationality: "French",
-    flag: "🇫🇷",
+    nationality: "France",
+    countryCode: "FR",
     codingStrengths: "React, Node.js , php , Kubernetes , Docker , Flask",
     codingWeaknesses: "CSS , TypeScript",
     biggestAchievement: "Created a mobile app called HealthyCore, focused on fitness and nutrition.",
     funFact: "Practice scuba diving and have earned several diving certifications.",
-    photo: "images/NR-pdp.jpg"
+    photo: "public/images/NR-pdp.jpg"
   },
   {
     id: 2,
     name: "Achille POIRIER",
     age: 22,
-    dateOfBirth: "2003-06-01", 
-    placeOfBirth: "Marseille , France",
+    dateOfBirth: "", // You can fill this in later if you have it
+    placeOfBirth: "France",
     nationality: "French",
-    flag: "🇫🇷",
+    countryCode: "FR",
     codingStrengths: "Backend, CI/CD, K8s",
     codingWeaknesses: "CSS styling, UI/UX design, Presentation skills",
     biggestAchievement: "Wrote the necessary code for running the webcomic at janov.eu/comic",
