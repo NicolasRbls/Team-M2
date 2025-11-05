@@ -10,30 +10,56 @@ const PlayerProfilePage = () => {
     return <div className="container text-center my-5"><h2>Player not found</h2></div>;
   }
 
+  const strengths = player.codingStrengths.split(', ').map(s => s.trim());
+  const weaknesses = player.codingWeaknesses.split(', ').map(w => w.trim());
+
   return (
-    <div className="container my-5">
-      <div className="row">
-        <div className="col-md-4 text-center">
-          <img src={player.photo} className="img-fluid rounded-circle mb-4" alt={player.name} style={{width: '250px', height: '250px', objectFit: 'cover'}} />
-          <Link to="/" className="btn btn-primary btn-lg">Back to Squad</Link>
-        </div>
-        <div className="col-md-8">
-          <h1 className="display-4">{player.name}</h1>
-          <hr />
-          <div className="row">
-            <div className="col-md-6">
-              <p><strong>Age:</strong> {player.age}</p>
-              <p><strong>Date of Birth:</strong> {player.dateOfBirth}</p>
-              <p><strong>Place of Birth:</strong> {player.placeOfBirth}</p>
-              <p><strong>Nationality:</strong> {player.nationality} <FlagIcon code={player.countryCode as FlagIconCode} /></p>
-            </div>
-            <div className="col-md-6">
-              <p><strong>Coding Strengths:</strong> {player.codingStrengths}</p>
-              <p><strong>Coding Weaknesses:</strong> {player.codingWeaknesses}</p>
-              <p><strong>Biggest Achievement:</strong> {player.biggestAchievement}</p>
-              <p><strong>Fun Fact:</strong> {player.funFact}</p>
+    <div className="player-profile-container">
+      <div className="player-profile-card">
+        <div className="player-profile-header">
+          <img src={player.photo} className="player-profile-img" alt={player.name} />
+          <div className="player-profile-header-info">
+            <h1 className="player-profile-name">{player.name}</h1>
+            <div className="player-profile-meta">
+              <span>Age: {player.age}</span>
+              <span>DOB: {player.dateOfBirth}</span>
+              <span><FlagIcon code={player.countryCode as FlagIconCode} /> {player.nationality}</span>
             </div>
           </div>
+        </div>
+
+        <div className="player-profile-body">
+          <div className="profile-section">
+            <h3>Biggest Achievement</h3>
+            <p>{player.biggestAchievement}</p>
+          </div>
+
+          <div className="profile-section">
+            <h3>Skills</h3>
+            <div className="skills-container">
+              <div className="skills-list strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  {strengths.map((strength, index) => <li key={index}>{strength}</li>)}
+                </ul>
+              </div>
+              <div className="skills-list weaknesses">
+                <h4>Weaknesses</h4>
+                <ul>
+                  {weaknesses.map((weakness, index) => <li key={index}>{weakness}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="profile-section">
+            <h3>Fun Fact</h3>
+            <p>{player.funFact}</p>
+          </div>
+        </div>
+
+        <div className="player-profile-footer">
+          <Link to="/" className="btn btn-primary">Back to Squad</Link>
         </div>
       </div>
     </div>
